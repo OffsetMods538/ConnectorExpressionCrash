@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "mod-template",
+	"version": "${modVersion}",
+	"name": "Mod Template",
+	"description": "Adds nothing",
+	"authors": [
+		"OffsetMonkey538"
+	],
+	"contact": {
+		"sources": "https://github.com/OffsetMods538/Mod-Template",
+		"issues": "https://github.com/OffsetMods538/Mod-Template/issues",
+		"homepage": "https://modrinth.com/mod/mod-template"
+	},
+	"license": "MIT",
+	"icon": "assets/mod-template/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"top.offsetmonkey538.modtemplate.ModTemplate"
+		],
+		"client": [
+			"top.offsetmonkey538.modtemplate.ModTemplateClient"
+		]
+	},
+	"mixins": [
+		"mod-template.mixins.json",
+		{
+			"config": "mod-template.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"accessWidener": "mod-template.accesswidener",
+	"depends": {
+		"minecraft": "${supportedMinecraftVersions}",
+		"java": ">=21"
+	}
+}
